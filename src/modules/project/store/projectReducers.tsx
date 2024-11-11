@@ -6,7 +6,9 @@ const projectReducers = {
   setProjectQueryParams: (
     state: ProjectState,
     action: PayloadAction<ProjectQueryParams>,
-  ) => {},
+  ) => {
+    state.projectQueryParams = action.payload
+  },
 };
 
 export default projectReducers;
