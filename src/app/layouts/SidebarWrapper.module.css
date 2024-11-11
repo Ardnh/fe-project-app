@@ -1,0 +1,40 @@
+/* Sidebar */
+.sidebar {
+     min-height: 100vh;
+     height: auto;
+     animation: slideOut 0.2s forwards;
+     position: relative;
+}
+ 
+/* Ketika sidebar disembunyikan */
+.hidden {
+     /* transform: translateX(-100%);
+     width: 0; */
+     animation: slideIn 0.2s forwards;
+}
+
+.sidebarContent {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+}
+ 
+@keyframes slideIn {
+     from {
+          width: 300px;
+     }
+     to {
+          width: 0px;
+          overflow: hidden;
+     }
+}
+
+@keyframes slideOut {
+     from {
+          width: 0px;
+     }
+     to {
+          width: 300px;
+     }
+}
